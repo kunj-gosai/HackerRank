@@ -1,0 +1,25 @@
+#!/bin/python3
+
+x = []
+y = []
+n = int(input())    
+for t in range(0, n):
+    name = input()
+    score = list(map(float, input().split()))
+    x.append(name)
+    y += score
+
+z = [[i, j] for i, j in zip(x, y)]
+z.sort(key=lambda z:z[1])
+m = min(y)
+for v in range(len(z)-1, -1, -1):
+    if z[v][1] > m:
+        p = z[v][1]
+o = p
+s = []
+for v in range(len(z)-1, -1, -1):
+    if o == z[v][1]:
+        c = z[v][0]
+        s.append(c)
+        s.sort()
+print(*s, sep="\n")

@@ -1,0 +1,11 @@
+#!/bin/python3
+
+n = int(input())
+arr = list(map(int, input().split()))
+    
+maximum = max(arr)
+arr.sort()
+for i in range(0, n):
+    if arr[i] < maximum:
+        p = arr[i]
+print(p) 

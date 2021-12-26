@@ -1,0 +1,19 @@
+#!/bin/python3
+
+def is_leap(year):
+    leap = False
+    x= year % 4
+    y = year % 100
+    z = year % 400
+    
+    if year >= 1900:
+        if x == 0:
+            if y == 0:
+                if z == 0:  
+                    leap = True
+            elif y != 0:
+                if z != 0:
+                    leap = True
+    return leap
+
+year = int(input())

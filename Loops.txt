@@ -1,0 +1,8 @@
+#!/bin/python3
+
+n = int(input())
+
+for num in range(0, n):
+    i = num
+    print(i*i)
+
