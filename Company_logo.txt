@@ -1,0 +1,16 @@
+#!/bin/python3
+
+s = input()
+c = {}
+
+for char in s:
+  if char in c:
+    c[char] += 1
+  else:
+    c[char] = 1
+
+d = [[c[char],char] for char in c.keys()]
+d.sort(key = lambda p: [-p[0], p[1]])
+
+for u in range(3):
+    print(d[u][1], d[u][0])

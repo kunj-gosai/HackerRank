@@ -1,0 +1,42 @@
+#!/bin/python3
+
+def diagonalDifference(arr):
+
+    '''
+    s1 = 0
+    s2 = 0
+    
+    for x in range(0, n):
+        for y in range(0, n):
+            if x == y:
+                s1 += int(arr[x][y])
+
+            if x == 0 and y == n-1:
+                for k in range(n):
+                    s2 += int(arr[x][y])
+                    x += 1
+                    y -= 1
+            #print(s2)
+    print(abs(s1 - s2))
+    '''
+    
+    
+    t = 0
+    y = 0
+    for i in range(0, len(arr)):
+        t += arr[i][i]
+    
+    for j in range(0, len(arr)):
+        y += arr[j][len(arr)-1-j]
+    
+    print(abs(t-y))
+    
+n = int(input().strip())
+arr = []
+
+for _ in range(n):
+    arr.append(list(map(int, input().rstrip().split())))
+
+result = diagonalDifference(arr)
+
+ 
