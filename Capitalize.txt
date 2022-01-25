@@ -1,0 +1,22 @@
+#!/bin/python3
+
+def solve(s):
+    
+    p = list(s.split(" "))
+    r = []
+    
+    for word in p:
+        k = word.capitalize()
+        r.append(k)
+    return " ".join(r)   
+
+
+fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+s = input()
+
+result = solve(s)
+
+fptr.write(result + '\n')
+
+fptr.close()
